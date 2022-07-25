@@ -1,0 +1,24 @@
+fields:
+    site_title:
+        label: Title
+        type: text
+        default: My new websites
+        comment: Used at site title
+    site_locale:
+        label: Locale
+        type: text
+        default: en
+        comment: Used for HTML lang parameter
+    color:
+        label: Color scheme
+        type: dropdown
+        default: orange
+        options:
+            orange: Orange
+            blue: Blue
+            green: Green
+    intro_fullscreen:
+        label: Intro fullscreen
+        type: switch
+        default: false
+        comment: Intro image is fullscreen

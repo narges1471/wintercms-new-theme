@@ -1,0 +1,71 @@
+title = "Eshop"
+url = "/eshop"
+layout = "clean"
+is_hidden = 0
+==
+{% put styles %}
+<link rel='stylesheet' href="{{ 'assets/css/woocommerce/woocommerce-layout.css' | theme }}" type="text/css" media="all" />
+<link rel='stylesheet' href="{{ 'assets/css/woocommerce/woocommerce-smallscreen.css' | theme }}" type="text/css" media="only screen and (max-width: 768px)" />
+<link rel='stylesheet' href="{{ 'assets/css/woocommerce/woocommerce.css' | theme }}" type="text/css" media="all" />
+{% endput %}
+
+{% put bodyclass %}
+woocommerce
+{% endput %}
+
+<div class="jumbotron image-banner banner-custom-header" style="background:url('{{ 'assets/images/samples/cropped-country-road-1149667_1920.jpg' | theme }}') no-repeat 0 0 #ffffff;background-size:cover;background-position:center center">
+    <div class="container">
+        <h1 class="block-title wow zoomIn">Shop</h1>
+    </div>
+</div>
+
+<div class="section page-content bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="page-woocommerce" class="clearfix product type-product status-publish has-post-thumbnail product_cat-posters first instock sale shipping-taxable purchasable product-type-simple">
+
+                    <h1 class="page-title"></h1>
+
+                    <p class="woocommerce-result-count">
+                        Showing 1&ndash;10 of 23 results
+                    </p>
+
+                    <form class="woocommerce-ordering" method="get">
+                        <select name="orderby" class="orderby">
+                            <option value="menu_order"  selected='selected'>Default sorting</option>
+                            <option value="popularity" >Sort by popularity</option>
+                            <option value="rating" >Sort by average rating</option>
+                            <option value="date" >Sort by newness</option>
+                            <option value="price" >Sort by price: low to high</option>
+                            <option value="price-desc" >Sort by price: high to low</option>
+                        </select>
+                    </form>
+
+                    <ul class="products">
+
+                        {% for i in 1..16 %}
+                        <li class="{% if loop.index % 4 == 0 %}last {% endif %}product type-product status-publish has-post-thumbnail product_cat-clothing product_cat-t-shirts instock shipping-taxable purchasable product-type-simple">
+                            <a href="#" class="woocommerce-LoopProduct-link">
+                                <img width="300" height="300" src="{{ 'assets/images/samples/poster_2_up-300x300.jpg' | theme }}" />
+                                <h3>Happy Ninja</h3>
+                                <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>18.00</span></span>
+                            </a><a rel="nofollow" href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+
+                    <nav class="woocommerce-pagination">
+                        <ul class='page-numbers'>
+                            <li><span class='page-numbers current'>1</span></li>
+                            <li><a class='page-numbers' href='#'>2</a></li>
+                            <li><a class='page-numbers' href='#'>3</a></li>
+                            <li><a class="next page-numbers" href="#">&rarr;</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+title = "Blog listing normal"
+url = "/blog-listing-normal"
+layout = "clean"
+is_hidden = 0
+==
+<div class="jumbotron image-banner banner-custom-header" style="background:url('{{ 'assets/images/samples/cropped-country-road-1149667_1920.jpg' | theme }}') no-repeat 0 0 #ffffff;background-size:cover;background-position:center center">
+    <div class="container">
+        <h1 class="block-title wow zoomIn">Blog</h1>
+    </div>
+</div>
+
+<div class="section blog-feed bg-white">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-9 blog-feed-column">
+
+                {% for i in 1..3 %}
+                <div class="entry clearfix wow zoomIn post type-post status-publish format-standard has-post-thumbnail sticky hentry category-sample-posts category-uncategorized">
+
+                    <!-- Post Title -->
+                    <h3 class="entry-title">
+                        <a href="#">The best free multipurpose theme just got better!</a>
+                    </h3>
+
+                    <!-- Small Image Left, Excerpt Right -->
+                    <div class="entry-image entry-image-left">
+                        <a class="post-thumbnail post-thumbnail-small" href="#">
+                            <img width="1200" height="676" src="{{ 'assets/images/samples/girl-1031772_1920-1-300x250.jpg' | theme }}" class="attachment-full size-full wp-post-image" alt="The best free multipurpose theme just got better!" />
+                        </a>
+                    </div>
+
+                    <div class="entry-content-right">
+                        <p>Duis tempus condimentum cursus. Proin posuere et dui nec posuere. Ut tempus odio sit amet ligula bibendum egestas. Ut imperdiet mi id elit fermentum aliquet. Sed vitae eros a mi pulvinar blandit. Fusce at hendrerit dolor, et hendrerit arcu.</p>
+                    </div>
+                    <!-- /Small Image Left, Excerpt Right -->
+
+                    <!-- Post Meta -->
+                    <div class="entry-meta  entry-meta-right ">
+                        Posted: Feb 16, 2016<br />Under: <a href="#" rel="category tag">Sample Posts</a>, <a href="#" rel="category tag">Uncategorized</a>
+                    </div>
+                    <!-- /Post Meta -->
+                </div>
+                {% endfor %}
+
+                <!-- Pagination -->
+                <div class="posts-pagination">
+                    <div class="posts-pagination-block">
+                        <a href="#">
+                            <span class="ic ic-angle-left"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /Pagination -->
+
+            </div>
+
+            <div class="col-md-3 sidebar">
+                {% partial 'modules/sidebar' %}
+            </div>
+
+        </div>
+    </div>
+</div>

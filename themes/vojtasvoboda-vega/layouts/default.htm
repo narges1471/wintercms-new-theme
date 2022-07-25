@@ -1,0 +1,92 @@
+description = "Default layout"
+==
+<?php
+function onStart() {
+    $this['baseUrl'] = Config::get('app.url');
+}
+==
+<!DOCTYPE html>
+<html lang="{{ this.theme.site_locale }}">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{% if this.page.title %}{{ this.page.title}} &#124; {% endif %}{{ this.theme.site_title }}</title>
+
+    <link rel='stylesheet' href="{{ 'assets/css/animate/animate.css' | theme }}" type="text/css" media="all" />
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C700i%2C900%2C900i&#038;ver=4.6.1' type='text/css' media='all' />
+    <link rel='stylesheet' href="{{ 'assets/css/bootstrap.min.css' | theme }}" type="text/css" media="all" />
+    <link rel='stylesheet' href="{{ 'assets/css/font-awesome.min.css' | theme }}" type="text/css" media="all" />
+    <link rel='stylesheet' href="{{ 'assets/css/bootstrap-social.css' | theme }}" type="text/css" media="all" />
+    <link rel='stylesheet' href="{{ 'assets/css/style.css' | theme }}" type="text/css" media="all" />
+    <link rel='stylesheet' href="{{ ('assets/css/color-schemes/' ~ this.theme.color ~ '.css') | theme }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ 'assets/css/jetpack/jetpack.css' | theme }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ 'assets/css/custom.css' | theme }}" type="text/css" media="all" />
+    <style type="text/css">
+        .qtranxs_flag_en {
+            background-image: url({{ 'assets/images/flags/gb.png' | theme }}); background-repeat: no-repeat;
+        }
+        .qtranxs_flag_de {
+            background-image: url({{ 'assets/images/flags/de.png' | theme }}); background-repeat: no-repeat;
+        }
+    </style>
+    {% styles %}
+
+    <link hreflang="en" href="{{ baseUrl }}/en/" rel="alternate" />
+    <link hreflang="de" href="{{ baseUrl }}/de/" rel="alternate" />
+    <link hreflang="x-default" href="{{ baseUrl }}" rel="alternate" />
+
+    <link rel="icon" href="{{ 'assets/images/favicons/cropped-vega-favicon-150x150.png' | theme }}" sizes="32x32" />
+    <link rel="icon" href="{{ 'assets/images/favicons/cropped-vega-favicon-300x300.png' | theme }}" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="{{ 'assets/images/favicons/cropped-vega-favicon-180x180.png' | theme }}" />
+    <meta name="msapplication-TileImage" content="{{ 'assets/images/favicons/cropped-vega-favicon-300x300.png' | theme }}" />
+
+</head>
+<body class="{{ this.page.id }} page page-{{ this.page.id }} {% placeholder bodyclass %}">
+
+{% partial 'modules/header' %}
+{% partial 'modules/nav' %}
+
+<div class="section page-content bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page type-page status-publish hentry">
+                    <h3 class="page-title">{{ this.page.title }}</h3>
+                    <div class="page-content">
+                        {% page %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% partial 'modules/footer' %}
+{% partial 'modules/copyright' %}
+{% partial 'modules/elevator' %}
+
+<script type="text/javascript" src="{{ 'assets/js/jquery.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/jquery-migrate.min.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/jquery.form.min.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/jquery.blockUI.min.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/bootstrap.min.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/jquery.smartmenus.min.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/jquery.smartmenus.bootstrap.min.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/wow.min.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/vega-wp-anim.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/parallax.min.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/vega-wp.js' | theme }}"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jpfbembed = {"appid":"249643311490", "locale":"en_US"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="{{ 'assets/js/jetpack/facebook-embed.js' | theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/wp-embed.min.js' | theme }}"></script>
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>

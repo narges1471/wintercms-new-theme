@@ -1,0 +1,66 @@
+title = "Blog listing full"
+url = "/blog-listing-full"
+layout = "clean"
+is_hidden = 0
+==
+<div class="jumbotron image-banner banner-custom-header" style="background:url('{{ 'assets/images/samples/cropped-country-road-1149667_1920.jpg' | theme }}') no-repeat 0 0 #ffffff;background-size:cover;background-position:center center">
+    <div class="container">
+        <h1 class="block-title wow zoomIn">Blog</h1>
+    </div>
+</div>
+
+<div class="section blog-feed bg-white">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-9 blog-feed-column">
+
+                {% for i in 1..3 %}
+                <div class="entry clearfix wow zoomIn post type-post status-publish format-standard has-post-thumbnail sticky hentry category-sample-posts category-uncategorized">
+
+                    <!-- Post Title -->
+                    <h3 class="entry-title block-title block-title-left">
+                        <a href="#">The best free multipurpose theme just got better!</a>
+                    </h3>
+
+                    <!-- Large Image Top, Full Content Below -->
+                    <div class="entry-image entry-image-top">
+                        <a class="post-thumbnail post-thumbnail-large" href="#">
+                            <img width="1200" height="676" src="{{ 'assets/images/samples/girl-1031772_1920-1.jpg' | theme }}" class="attachment-full size-full wp-post-image" alt="The best free multipurpose theme just got better!" />
+                        </a>
+                    </div>
+
+                    <div class="entry-content">
+                        <p>Duis tempus condimentum cursus. Proin posuere et dui nec posuere. Ut tempus odio sit amet ligula bibendum egestas. Ut imperdiet mi id elit fermentum aliquet. Sed vitae eros a mi pulvinar blandit. Fusce at hendrerit dolor, et hendrerit arcu. Aenean rhoncus, libero at pulvinar laoreet, massa sapien tincidunt turpis, sit amet rhoncus turpis dolor ac orci. Aliquam erat volutpat. Ut ultrices odio sit amet ipsum mattis tincidunt.</p>
+                        <p>Donec semper neque at nunc congue, eget auctor odio mattis. Curabitur ac sapien odio. Duis non venenatis leo, sagittis maximus leo. Nam dolor lectus, sodales a suscipit ut, tincidunt vitae lacus. Duis cursus aliquet tortor quis ultricies. Nunc accumsan dui non dolor elementum, consequat porttitor erat euismod. Donec sed lorem est. Phasellus suscipit placerat sem, nec accumsan elit aliquet ut. Nam scelerisque, sem vel sollicitudin suscipit, lorem enim iaculis odio, a malesuada dolor arcu eu tellus. Maecenas vel placerat mauris, at blandit mauris. Sed consectetur nulla ut interdum vestibulum. Mauris non ex non tortor viverra vulputate. Donec vehicula, justo id blandit ultricies, mi felis egestas tellus, quis egestas neque neque ut velit. Duis mattis gravida sem nec efficitur. Nulla malesuada arcu et turpis vulputate, vel semper metus scelerisque.</p>
+                        <p>Vivamus interdum leo lectus, id rhoncus leo luctus lobortis. Proin venenatis massa nisi, elementum luctus risus viverra et. Integer lacinia eros massa, id aliquam metus sagittis sed. Ut in aliquet diam. Praesent tristique magna vulputate malesuada elementum. Fusce molestie ante elit, euismod tincidunt nisl mattis eu. Etiam vitae metus sagittis, lobortis lorem et, dapibus dui. Sed id arcu et nunc efficitur semper. Ut placerat nisi ac justo cursus, non lacinia metus posuere. Curabitur aliquam sagittis velit eget scelerisque. In ultrices ante ante, quis dictum magna pretium eget. Curabitur rutrum dapibus dui a accumsan. Phasellus ornare auctor commodo. Quisque vulputate turpis et auctor fermentum.</p>
+                    </div>
+                    <!-- /Large Image Top, Full Content Below -->
+
+                    <!-- Post Meta -->
+                    <div class="entry-meta">
+                        Posted: Feb 16, 2016<br />Under: <a href="#" rel="category tag">Sample Posts</a>, <a href="#" rel="category tag">Uncategorized</a>
+                    </div>
+                    <!-- /Post Meta -->
+                </div>
+                {% endfor %}
+
+                <!-- Pagination -->
+                <div class="posts-pagination">
+                    <div class="posts-pagination-block">
+                        <a href="#">
+                            <span class="ic ic-angle-left"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /Pagination -->
+
+            </div>
+
+            <div class="col-md-3 sidebar">
+                {% partial 'modules/sidebar' %}
+            </div>
+
+        </div>
+    </div>
+</div>

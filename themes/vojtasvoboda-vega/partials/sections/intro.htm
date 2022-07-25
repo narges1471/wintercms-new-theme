@@ -1,0 +1,16 @@
+<div
+    class="image-banner frontpage-banner frontpage-banner-parallax-bg{% if this.theme.intro_fullscreen %} full-screen{% endif %}"
+    data-parallax="scroll"
+    data-image-src="{{ 'assets/images/samples/vega-banner2-1-1.jpg' | theme }}"
+    id="intro">
+    <div class="container">
+        <div class="inner">
+            <h1 class="block-title wow zoomIn">ONE PAGE BUSINESS THEME</h1>
+            <div class="text-center hidden-xs wow zoomIn description">
+                {% content 'intro/content' %}
+                <p><a class="btn btn-primary-custom btn-margin-top" href="#4cols">View more</a></p>
+            </div>
+        </div>
+        <div class="helper"></div>
+    </div>
+</div>

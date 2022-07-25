@@ -1,0 +1,22 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<div class="section frontpage-content bg-white" id="welcome">
+    <div class="container">
+        <h2 class="block-title wow zoomIn">Welcome to Vega</h2>
+        <div class="wow fadeInUp description">
+            {% content 'welcome/content' %}
+            <p>
+                <a class="btn btn-primary-custom btn-margin-top" href="http://octobercms.com/theme/vojtasvoboda-vega">Download Latest Version</a>
+            </p>
+            <p class="no-margin">
+                <img src="{{ 'assets/images/samples/preview-1.jpg' | theme }}" class="img-responsive" />
+            </p>
+        </div>
+    </div>
+</div>

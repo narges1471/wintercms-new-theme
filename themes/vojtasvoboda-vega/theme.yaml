@@ -1,0 +1,6 @@
+name: 'Vega'
+description: 'Vega theme'
+author: 'Vojta Svoboda'
+homepage: 'http://www.vojtasvoboda.cz'
+code: Vega
+form: fields.yaml

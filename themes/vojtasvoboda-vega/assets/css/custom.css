@@ -1,0 +1,18 @@
+.no-margin {
+    margin-bottom: 0;
+}
+#welcome {
+    padding-bottom: 0;
+}
+a.navbar-brand.text-logo {
+    font-size:36px;
+}
+li#menu-item-668 a {
+    color: white;
+}
+li#menu-item-668 {
+    background-color: #000;
+}
+.widget_facebook_likebox {
+    overflow: hidden;
+}
